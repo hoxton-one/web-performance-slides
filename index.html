@@ -23,11 +23,11 @@
 	</div>
 
 	<div class="step title" data-x="0" data-y="0" >
-		<img height="500px" src="images/cloud9.png">
+		<img height="750px" src="images/cloud9.png">
 	</div>
 
 	<div class="step title" data-x="1500" data-y="0" >
-		<img height="500px" src="images/audiotool.jpg">
+		<img height="600px" src="images/audiotool.jpg">
 	</div>
 
 	<!-- STEP: Overview -->
@@ -103,8 +103,8 @@ for( var i = 0; i < length; i++ ) {
 		Actively manage the component lifecycle
 	</div>
 
-	<div class="step title" data-x="0" data-y="3000" >
-		<img height="500px" src="images/the-merchant.jpg">
+	<div class="step" data-x="0" data-y="3000" >
+		<img height="750px" src="images/the-merchant.jpg">
 	</div>
 
 	<div class="step js example" data-x="1500" data-y="3000">
@@ -161,10 +161,10 @@ setInterval( function() {
 </code>
 	</div>
 	<div class="step js quote" data-x="1500" data-y="6000">
-		<div style="width:750px; font-size: 20px" class="quote">
+		<div style="width:750px; font-size: 25px" class="quote">
 			"So the real question is this: can you do 2000 comparisons in 50 ms even on slow browsers? That means that you have 25 µs per comparison. I believe this is not an issue even on slow browsers these days. <b>There is a caveat: the comparisons need to be simple to fit into 25 µs.</b>"
 		</div>
-		<div style="width:750px; font-size: 20px; text-align: right" class="quote-by">
+		<div style="width:750px; font-size: 25px; text-align: right" class="quote-by">
 			Misko Hevery
 		</div>
 	</div>
@@ -247,7 +247,7 @@ for( var i=0; i < length; i++ ) {
 
 	<!-- CSS composition vs render layer -->
 	<div class="step css title" data-x="3000" data-y="1500">
-		CSS composition vs Render layer
+		CSS composition vs Reflow 
 	</div>
 	<div class="step css result" data-x="4500" data-y="1500">
 		<img src="images/full-render.jpg">
@@ -288,18 +288,19 @@ for( var i=0; i < length; i++ ) {
 	</div>
 
  	<div class="step finished" data-x="4500" data-y="6000" data-z="12000">
-		
+<!-- 		
 		http://jsperf.com/for-loop-vs-foreach-vs-foreach-shim/5
 		<br/>
 		https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count
 		<br/>
 		http://csstriggers.com/
 
-
+ -->
 	</div>
 </div>
 
-<script src="bower_components/impress.js/js/impress.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script src="http://impress.github.io/impress.js/js/impress.js"></script>
 <script>impress().init();</script>
 </body>
 </html>
