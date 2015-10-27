@@ -1,0 +1,146 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+body{
+	background-image: radial-gradient(#FFF,#BBB);
+	font-family: Roboto;
+	font-weight: 300;
+}
+
+.step{
+	transition: background-color 500ms ease;
+}
+
+.impress-on-step-32 .step{
+	width: 1400px;
+    height: 800px;
+}
+
+.impress-on-step-32 .overview{
+	display: none;
+}
+
+/*******************************
+* OVERVIEW
+* *****************************/
+.overview .container{
+	width: 660px;
+	overflow: hidden;
+	clear: left;
+}
+
+.overview ul{
+	float: left;
+}
+
+.overview ul li{
+	width: 200px;
+	height: 30px;
+	margin: 10px;
+}
+
+.overview ul.js li,
+.impress-on-step-32 .step.js{
+	background-color: #33a1c8;
+}
+
+.overview ul.css li,
+.impress-on-step-32 .step.css{
+	background-color: #309a9d;
+}
+
+.overview ul.html li,
+.impress-on-step-32 .step.html{
+	background-color: #1e6c88;
+}
+
+.overview ul li.head{
+	background-color: transparent;
+    height: 23px;
+    font-size: 20px;
+    margin-bottom: -6px;
+    border-bottom: 1px solid #aaa;
+}
+
+/*******************************
+* TITLE
+* *****************************/
+.title{
+	width: 800px;
+	font-size: 40px;
+	color: #333;
+	text-align: center;
+}
+
+/*******************************
+* EXAMPLE
+* *****************************/
+.example{
+	width: 1000px;
+}
+
+.example h3{
+	font-size: 40px;
+	font-weight: 300;
+	color: #999;
+}
+
+.example code{
+	font: 30px "Courier New", monospace;
+	white-space: pre;
+}
+
+.example code .comment{
+	color: #999;
+}
+
+/*******************************
+* RESULT
+* *****************************/
+.result .bar-chart{
+	width: 660px;
+	overflow: hidden;
+}
+
+.result .bar-chart li{
+	float: left;
+	height: 600px;
+	width: 200px;
+	margin: 0 10px;
+}
+
+.result .bar-chart li .bar{
+	height: 500px;
+	width: 80%;
+	margin: 0 10%;
+	position: relative;
+}
+
+.result .bar-chart li .bar .bg{
+	background-color: #33a1c8;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.result .bar-chart li .bar .percent{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	bottom: 20px;
+	color: #fff;
+	z-index: 1;
+}
+
+.result .bar-chart li.low-value .bar .percent{
+	color: #33a1c8;
+}
+
+.result .bar-chart li label{
+	text-align: center;
+	display: block;
+	margin-top: 5px;
+}

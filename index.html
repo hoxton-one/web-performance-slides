@@ -1,0 +1,213 @@
+<!doctype HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=1024" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<title>10 Web App Performance Pitfalls</title>
+
+	<link href="css/screen.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+
+<div id="impress">
+	
+	<!-- STEP: Overview -->
+	<div class="step overview" data-x="-1500" data-y="0" data-rotate-x="40" >
+		<div class="container">
+			<ul class="js">
+				<li class="head">JS</li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul class="css">
+				<li class="head">CSS</li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul class="html">
+				<li class="head">HTML</li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Convenience Methods and shims -->
+	<div class="step js title" data-x="-1500" data-y="1500">
+		Avoid convenience methods <br />(especially when using shims)
+	</div>
+	<div class="step js example" data-x="0" data-y="1500">
+<code>
+<span class="comment">// slow</span>
+longArray.forEach(function( entry ){
+  entry;
+});
+
+<span class="comment">// fast</span>
+for( var i = 0; i < longArray.length; i++ ) {
+  longArray[ i ];
+}
+</code>
+	</div>
+	<div class="step js result" data-x="1500" data-y="1500">
+		<ul class="bar-chart">
+			<li>
+				<div class="bar">
+					<div class="percent">100%</div>
+					<div class="bg" style="height: 100%"></div>
+				</div>
+				<label>for</label>
+			</li>
+			<li class="low-value">
+				<div class="bar">
+					<div class="percent">3.7%</div>
+					<div class="bg" style="height: 3.7%"></div>
+				</div>
+				<label>forEach</label>
+			</li>
+			<li class="low-value">
+				<div class="bar">
+					<div class="percent">0.7%</div>
+					<div class="bg" style="height: 0.7%"></div>
+				</div>
+				<label>forEach shim</label>
+			</li>
+		</ul>
+	</div>
+
+
+	<!-- Component Lifecycle -->
+	<div class="step js title" data-x="-1500" data-y="3000">
+		Actively manage the component lifecycle
+	</div>
+	<div class="step js example" data-x="0" data-y="3000">
+<code>
+Code here
+</code>
+	</div>
+	<div class="step js result" data-x="1500" data-y="3000">
+		Chart here ... or delete to skip
+	</div>
+
+
+	<!-- Energetic Templating -->
+	<div class="step js title" data-x="-1500" data-y="4500">
+		Energetic Templating
+	</div>
+	<div class="step js example" data-x="0" data-y="4500">
+<code>
+Code here
+</code>
+	</div>
+	<div class="step js result" data-x="1500" data-y="4500">
+		Chart here ... or delete to skip
+	</div>
+
+
+	<!-- Dirty Checking -->
+	<div class="step js title" data-x="-1500" data-y="6000">
+		Dirty Checking
+	</div>
+	<div class="step js example" data-x="0" data-y="6000">
+<code>
+Code here
+</code>
+	</div>
+	<div class="step js result" data-x="1500" data-y="6000">
+		Chart here ... or delete to skip
+	</div>
+
+
+	<!-- WebWorkers - Overhead vs Benefit -->
+	<div class="step js title" data-x="-1500" data-y="7500">
+		WebWorkers - Overhead vs Benefit
+	</div>
+	<div class="step js example" data-x="0" data-y="7500">
+<code>
+Code here
+</code>
+	</div>
+	<div class="step js result" data-x="1500" data-y="7500">
+		Chart here ... or delete to skip
+	</div>
+
+	<!-- Work with your compiler, not against it -->
+	<div class="step js title" data-x="-1500" data-y="9000">
+		Work with your compiler, not against it
+	</div>
+	<div class="step js example" data-x="0" data-y="9000">
+<code>
+Code here
+</code>
+	</div>
+	<div class="step js result" data-x="1500" data-y="9000">
+		Chart here ... or delete to skip
+	</div>
+
+	<!-- recycle your garbage -->
+	<div class="step js title" data-x="-1500" data-y="10500">
+		recycle your garbage
+	</div>
+	<div class="step js example" data-x="0" data-y="10500">
+<code>
+Code here
+</code>
+	</div>
+	<div class="step js result" data-x="1500" data-y="10500">
+		Chart here ... or delete to skip
+	</div>
+
+	<!-- CSS composition vs render layer -->
+	<div class="step css title" data-x="3000" data-y="1500">
+		CSS composition vs render layer
+	</div>
+	<div class="step css example" data-x="4500" data-y="1500">
+<code>
+Code here
+</code>
+	</div>
+	<div class="step css result" data-x="6000" data-y="1500">
+		Chart here ... or delete to skip
+	</div>
+
+	<!-- Don't forget that css runs code too -->
+	<div class="step css title" data-x="3000" data-y="3000">
+		Don't forget that css runs code too
+	</div>
+	<div class="step css example" data-x="4500" data-y="3000">
+<code>
+Code here
+</code>
+	</div>
+	<div class="step css result" data-x="6000" data-y="3000">
+		Chart here ... or delete to skip
+	</div>
+
+	<!-- Batch DOM updates -->
+	<div class="step html title" data-x="7500" data-y="1500">
+		Batch DOM updates
+	</div>
+	<div class="step html example" data-x="9000" data-y="1500">
+<code>
+Code here
+</code>
+	</div>
+	<div class="step html result" data-x="10500" data-y="1500">
+		Chart here ... or delete to skip
+	</div>
+
+	<div class="step" data-x="4500" data-y="6000" data-z="12000"></div>
+</div>
+
+<script src="bower_components/impress.js/js/impress.js"></script>
+<script>impress().init();</script>
+</body>
+</html>

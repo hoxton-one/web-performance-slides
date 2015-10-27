@@ -1,0 +1,22 @@
+{
+  "name": "web-performance-slides",
+  "version": "0.0.0",
+  "homepage": "https://github.com/hoxton-one/web-performance-slides",
+  "authors": [
+    "Wolfram Hempel <hempel.wolfram@gmail.com>"
+  ],
+  "description": "for web performance talk",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "impress.js": "~0.5.3"
+  }
+}
