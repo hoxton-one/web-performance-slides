@@ -19,15 +19,15 @@
 		10 Web App Performance Pitfalls
 		<br/>
 		<br/>
-		@hoxton-one
+		@hoxtonone
 	</div>
 
 	<div class="step title" data-x="0" data-y="0" >
-		<img height="500px" src="images/gmail.jpg">
+		<img height="500px" src="images/cloud9.png">
 	</div>
 
 	<div class="step title" data-x="1500" data-y="0" >
-		<img height="500px" src="images/cloud9.jpg">
+		<img height="500px" src="images/audiotool.jpg">
 	</div>
 
 	<!-- STEP: Overview -->
@@ -57,7 +57,7 @@
 
 	<!-- Convenience Methods and shims -->
 	<div class="step js title" data-x="-1500" data-y="1500">
-		Avoid convenience methods <br />(especially when using shims)
+		Using convenience methods <br />(especially when using shims)
 	</div>
 	<div class="step js example" data-x="0" data-y="1500">
 <pre><code>
@@ -131,15 +131,14 @@ widget.show = function() {
 
 	<!-- Energetic Templating -->
 	<div class="step js title" data-x="-1500" data-y="4500">
-		Energetic Templating
+		Framework Templating
 	</div>
 	<div class="step js example" data-x="0" data-y="4500">
 <code>
-<span class="comment">// Repeats ( Angular ) </span>
-scope.listBoundToNgRepeat = serverFetch()
 
 <span class="comment">// Markup choice ( Angular ) </span>
-<span>{{ expression }}</span>
+&lt;span&gt;{{ firstname }}&lt;/span&gt;
+&lt;span ng-bind="firstname"&gt;&lt;/span&gt;
 
 </code>
 	</div>
@@ -152,7 +151,7 @@ scope.listBoundToNgRepeat = serverFetch()
 <code>
 
 <span class="comment">// Inline function calls</span>
-&lt;span ngBind="computeContent()"&gt;&lt;/span&gt;
+&lt;span ng-bind="computeContent()"&gt;&lt;/span&gt;
 
 <span class="comment">// Polling</span>
 setInterval( function() {
@@ -226,8 +225,8 @@ anArray[ 10 ];
 <code>
 <span class="comment">// Don't create instances for one off functions</span>
 
-for( var i=0; i < length; i++ ) {
-	( new Calculator() ).add( i, 1 ); 
+for( var i=0, length = arr.length; i < length; i++ ) {
+	( new Calculator() ).add( i, length ); 
 }
 
 <span class="comment">// Recycle objects</span>
